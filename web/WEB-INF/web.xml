@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>package1</servlet-name>
+        <servlet-class>pakage1.package1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>signupserv</servlet-name>
+        <servlet-class>signupserv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>signupservlets</servlet-name>
+        <servlet-class>pakage1.signupservlets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>package1</servlet-name>
+        <url-pattern>/package1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>signupserv</servlet-name>
+        <url-pattern>/signupserv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>signupservlets</servlet-name>
+        <url-pattern>/signupservlets</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
