@@ -12,6 +12,30 @@
         <servlet-name>signupservlets</servlet-name>
         <servlet-class>pakage1.signupservlets</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>profile</servlet-name>
+        <servlet-class>pakage1.profile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>try1</servlet-name>
+        <servlet-class>pakage1.try1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>try2</servlet-name>
+        <servlet-class>pakage1.try2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cartt</servlet-name>
+        <servlet-class>pakage1.cartt</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cartret</servlet-name>
+        <servlet-class>cartret</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>carret</servlet-name>
+        <servlet-class>pakage1.carret</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>package1</servlet-name>
         <url-pattern>/package1</url-pattern>
@@ -24,9 +48,34 @@
         <servlet-name>signupservlets</servlet-name>
         <url-pattern>/signupservlets</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>try1</servlet-name>
+        <url-pattern>/try1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>try2</servlet-name>
+        <url-pattern>/try2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cartt</servlet-name>
+        <url-pattern>/cartt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cartret</servlet-name>
+        <url-pattern>/cartret</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>carret</servlet-name>
+        <url-pattern>/carret</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    //welcome file list tag
 </web-app>

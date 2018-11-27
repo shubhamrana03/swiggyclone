@@ -83,7 +83,8 @@ public class signupservlets extends HttpServlet {
         String cpass=request.getParameter("psw-repeat");
       try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mypro1?useSSL=false", "root", "indiapalace");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mypro1?"
+                    + "useSSL=false", "root", "indiapalace");
             PreparedStatement pst = conn.prepareStatement("Insert into logi values(?,?)");
             pst.setString(1, mail);
             pst.setString(2, pass);
@@ -91,6 +92,7 @@ public class signupservlets extends HttpServlet {
             if (pass.equals(cpass)) 
             {
                 pst.executeUpdate();
+                response.sendRedirect("mainpage.html");
             } 
             else {
                 out.println("Password must match confirm password");

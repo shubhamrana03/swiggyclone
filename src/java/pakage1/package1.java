@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -77,22 +78,30 @@ public class package1 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //       processRequest(request, response);
+
        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String user = request.getParameter("name");
         String pass = request.getParameter("pass");
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mypro1?useSSL=false", "root", "indiapalace");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mypro1?"
+                    + "useSSL=false", "root", "indiapalace");
             PreparedStatement pst = conn.prepareStatement("Select name,pwd from logi where name=? and pwd=?");
             pst.setString(1, user);
             pst.setString(2, pass);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                out.println("Welcome to Swiggy");
+                HttpSession session = request.getSession();
+                session.setAttribute("xname",user);
+                //session.setMaxInactiveInterval(10*80);
+                response.sendRedirect("dashhh.jsp");
+             //   session.removeAttribute("xname");
+                   
+//     out.println("Welcome to Swiggy");
             } 
             else {
-                out.println("Session Expired");
+                response.sendRedirect("index.html");
             }
         } 
         catch (ClassNotFoundException | SQLException e) {
