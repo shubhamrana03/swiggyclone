@@ -58,7 +58,8 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Checkout Cart</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("    <Center>\n");
+      out.write("    <Center>Present Cart Status</center>\n");
+      out.write("    <p align=\"left\"\n");
       out.write("        ");
  
             Connection conn = null;
@@ -85,7 +86,7 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
         
       out.write("\n");
       out.write("        \n");
-      out.write("    </Center>\n");
+      out.write("</p>\n");
       out.write("</body>\n");
       out.write("</html>\n");
       out.write("        \n");

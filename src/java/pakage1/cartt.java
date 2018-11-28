@@ -65,7 +65,7 @@ public class cartt extends HttpServlet {
                //session.setMaxInactiveInterval(10*80);
                 //1RequestDispatcher rd=request.getRequestDispatcher("cart.jsp");
                 //rd.forward(request, response);
-               // response.sendRedirect("cart.jsp");
+                response.sendRedirect("cart.jsp");
               // out.println("Welcome");
           
         } 

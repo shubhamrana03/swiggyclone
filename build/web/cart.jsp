@@ -15,8 +15,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Checkout Cart</title>
     </head>
-    <body>
-    <Center>
+    <body bgcolor="#EFD799">
+    <Center>Present Cart Status</center>
+    <p align="left">
         <% 
             Connection conn = null;
             Statement st =null;
@@ -31,7 +32,7 @@
            rs=st.executeQuery(qry);
            while(rs.next())
            {
-               out.print("name :"+rs.getString(1)+"quantity :"+rs.getString(2));
+               out.print("name :"+rs.getString(1)+"<br>"+"      quantity :"+rs.getString(2)+"<br>");
            }
            
             }
@@ -41,7 +42,17 @@
         
         %>
         
-    </Center>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<p> Make Payements</p>
+
+<img src="images\f1.jpg" length=200 width=200><br>
+<a href="deal.html">Click here to proceed</a>
 </body>
 </html>
         
