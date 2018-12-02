@@ -47,7 +47,7 @@ public class cartt extends HttpServlet {
       try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/mypro1?"
-                    +"useSSL=false", "root", "indiapalace");
+                    +"useSSL=false", "root", "");
             PreparedStatement pst = conn.prepareStatement("Insert into cartt values(?,?)");
             pst.setString(1, mail);
             pst.setString(2, pass);
